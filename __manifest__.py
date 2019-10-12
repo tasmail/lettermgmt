@@ -41,6 +41,7 @@
         "views/letter_reassignment_view.xml",
         "views/letter_type_view.xml",
         "data/letter_sequence.xml",
+        'security/letter_security.xml',
         'security/ir.model.access.csv',
     ],
     'demo': ["data/letter_demo.xml"],
