@@ -160,6 +160,7 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','out')]</field>
+      <field name="context">{'move':'out'}</field>
     </record>
 
     <record model="ir.actions.act_window" id="action_res_letter_in_tree_view">
@@ -169,6 +170,7 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','in')]</field>
+      <field name="context">{'move':'in'}</field>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_out_tree_mode">
