@@ -44,8 +44,10 @@
         'security/ir.model.access.csv',
     ],
     'demo': ["data/letter_demo.xml"],
-    'test': [],
-    'installable': False,
+    'test': ['tests/test_lettermgmt.py'],
+    'images': ['static/description/icon.png'],
+    'installable': True,
+    'application': True,
     'auto_install': False,
 }
 
