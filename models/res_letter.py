@@ -122,6 +122,7 @@ class ResLetter(models.Model):
         'res.letter',
         string='Parent',
         groups='lettermgmt.group_letter_thread')
+
     child_line = fields.One2many(
         'res.letter',
         'parent_id',

@@ -45,15 +45,35 @@
       <field name="model">res.letter</field>
       <field name="arch" type="xml">
         <search string="Search Letters">
+          <filter string="Sent" name="sent"
+                  domain="[('state','in', ['sent'])]"
+                  help="Letters that were sent to its destination."/>
+          <filter string="Received" name="received"
+                  domain="[('state','in', ['rec', 'rec_bad', 'rec_ret'])]"
+                  help="Letters that arrived to its destination."/>
+          <filter string="Pending" name="pending"
+                  domain="[('state','in', ['draft', 'sent'])]"
+                  help="Letters that haven't arrived to its destination yet."/>
+          <filter string="Canceled" name="canceled"
+                  domain="[('state','in', ['cancel'])]"
+                  help="Letters that were canceled."/>
+          <separator/>
           <field name="sender_partner_id" operator="child_of"/>
           <field name="recipient_partner_id" operator="child_of"/>
           <field name="name" />
           <field name="category_ids" filter_domain="[('category_ids', 'ilike', self)]"/>
           <field name="date"/>
+          <field name="state"/>
           <separator/>
-          <filter string="Pending" name="pending"
-                  domain="[('state','in', ['draft', 'sent'])]"
-                  help="Letters that haven't arrived to its destination yet."/>
+          <group expand="0" string="Group By" colspan="4">
+              <filter string="State" domain="[]" context="{'group_by':'state'}"/>
+              <filter string="Recipient" domain="[]" context="{'group_by':'recipient_partner_id'}"/>
+              <filter string="Sender" domain="[]" context="{'group_by':'sender_partner_id'}"/>
+              <filter string="Channel" domain="[]" context="{'group_by':'channel_id'}"/>
+              <filter string="Folder" domain="[]" context="{'group_by':'folder_id'}"/>
+              <filter string="Type" domain="[]" context="{'group_by':'type_id'}"/>
+              <filter string="Parent" domain="[]" context="{'group_by':'parent_id'}" groups="lettermgmt.group_letter_thread"/>
+          </group>
         </search>
       </field>
     </record>
@@ -139,7 +159,6 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','out')]</field>
-      <field name="context">{'move':'out', 'search_default_pending': 1}</field>
     </record>
 
     <record model="ir.actions.act_window" id="action_res_letter_in_tree_view">
@@ -149,7 +168,6 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','in')]</field>
-      <field name="context">{'move':'in', 'search_default_pending': 1}</field>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_out_tree_mode">
