@@ -747,3 +747,13 @@ msgstr "Вес"
 #: help:res.letter,weight:0
 msgid "Weight (in KG)"
 msgstr "Вес корреспонденции в килограммах"
+
+#. module: lettermgmt
+#: model:ir.module.module,shortdesc:base.module_lettermgmt
+msgid "Letter Management"
+msgstr "Управление корреспонденцией"
+
+#. module: lettermgmt
+#: model:ir.module.module,shortdesc:base.module_lettermgmt
+msgid "Track letters, parcels, registered documents"
+msgstr "Отслеживайте письма, посылки и документы"
