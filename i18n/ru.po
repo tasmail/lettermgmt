@@ -557,7 +557,7 @@ msgstr "Размер пакета"
 #: model:ir.model.fields,field_description:lettermgmt.field_res_letter_state
 #: model:ir.ui.view,arch_db:lettermgmt.res_letter_filter
 msgid "State"
-msgstr "Регион"
+msgstr "Состояние"
 
 #. module: lettermgmt
 #: model:ir.model.fields,field_description:lettermgmt.field_res_letter_name
