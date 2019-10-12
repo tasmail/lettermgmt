@@ -73,13 +73,13 @@ class ResLetter(models.Model):
         'res.partner',
         string='Recipient',
         track_visibility='onchange',
-        required=True,
+        # required=True, TODO: make it required in 9.0
         default=default_recipient)
     sender_partner_id = fields.Many2one(
         'res.partner',
         string='Sender',
         track_visibility='onchange',
-        required=True,
+        # required=True, TODO: make it required in 9.0
         default=default_sender)
     note = fields.Text(
         string='Delivery Notes',
