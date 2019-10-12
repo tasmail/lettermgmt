@@ -17,9 +17,12 @@ class ResLetter(models.Model):
     number = fields.Char(
         help="Auto Generated Number of letter.",
         default="/")
+
     name = fields.Text(
         string='Subject',
-        help="Subject of letter.")
+        help="Subject of letter.",
+        required=True)
+
     move = fields.Selection(
         [('in', 'IN'), ('out', 'OUT')],
         help="Incoming or Outgoing Letter.",
@@ -51,10 +54,13 @@ class ResLetter(models.Model):
     date = fields.Date(
         string='Letter Date',
         help='The letter\'s date.',
-        default=fields.Date.today)
+        default=fields.Date.today,
+        required=True)
+
     snd_date = fields.Date(
         string='Sent Date',
         help='The date the letter was sent.')
+
     rec_date = fields.Date(
         string='Received Date',
         help='The date the letter was received.')
@@ -73,14 +79,16 @@ class ResLetter(models.Model):
         'res.partner',
         string='Recipient',
         track_visibility='onchange',
-        # required=True, TODO: make it required in 9.0
+        required=True,
         default=default_recipient)
+
     sender_partner_id = fields.Many2one(
         'res.partner',
         string='Sender',
         track_visibility='onchange',
-        # required=True, TODO: make it required in 9.0
+        required=True,
         default=default_sender)
+
     note = fields.Text(
         string='Delivery Notes',
         help='Indications for the delivery officer.')

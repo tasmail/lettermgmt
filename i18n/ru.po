@@ -36,6 +36,18 @@ msgid ""
 "\n"
 "            * Cancel: has been cancelled, can't be sent anymore."
 msgstr ""
+"\n"
+"            * Черновик: еще не подтвержден.\n"
+"\n"
+"            * Отправлен: отправено, редактирование запрещено.\n"
+"\n"
+"            * Получено: было получено.\n"
+"\n"
+"            * Получено Повреждено: было получено поврежденным.\n"
+"\n"
+"            * Полученно Возврат: было получено и отправленно назад.\n"
+"\n"
+"            * Отменено: было отмененно, повторная отправка не возможна."
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,help:lettermgmt.action_letter_category_tree_view
@@ -48,6 +60,13 @@ msgid ""
 "        </p>\n"
 "      "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Нажмите, что бы создать новую категорию.\n"
+"        </p><p>\n"
+"            Используйте категории для классификации корреспонденции.\n"
+"            Например: Секретно, Конфедициально, Для личного пользования...\n"
+"        </p>\n"
+"      "
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,help:lettermgmt.action_letter_channel_tree_view
@@ -61,6 +80,13 @@ msgid ""
 "        </p>\n"
 "      "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Нажмите, что бы создать способ доставки корреспонденции.\n"
+"        </p><p>\n"
+"            Используйте способы доставки, чтобы указать различные способы доставки корреспонденции."
+"            Например: Почта, Факс, Электронная почта...\n"
+"        </p>\n"
+"      "
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,help:lettermgmt.action_letter_folder_tree_view
@@ -71,6 +97,11 @@ msgid ""
 "        </p>\n"
 "      "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Нажмите, что бы создать папку для корреспонденции.\n"
+"            Используйте папки для группировки корреспонденции.\n"
+"        </p>\n"
+"      "
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,help:lettermgmt.action_letter_type_tree_view
@@ -83,21 +114,28 @@ msgid ""
 "        </p>\n"
 "      "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Нажмите, что бы создать тип корреспонденции.\n"
+"        </p><p>\n"
+"            Используйте типы корреспонденции, чтобы типизировать корреспонденцию.\n"
+"            Например: Конверт, Посылка, Пакет...\n"
+"        </p>\n"
+"      "
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Additional Information"
-msgstr ""
+msgstr "Дополнительная Информация"
 
 #. module: lettermgmt
 #: help:res.letter,number:0
 msgid "Auto Generated Number of letter."
-msgstr ""
+msgstr "Автогенерируемый номер письма."
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Back to Draft"
-msgstr ""
+msgstr "Назад к Черновикам"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
@@ -112,37 +150,32 @@ msgstr "Отменен"
 #. module: lettermgmt
 #: field:res.letter,channel_id:0
 msgid "Channel"
-msgstr ""
-
-#. module: lettermgmt
-#: help:res.letter,category_ids:0
-msgid "Classification of Document."
-msgstr ""
+msgstr "Способ доставки"
 
 #. module: lettermgmt
 #: field:letter.folder,code:0 field:letter.type,code:0
 msgid "Code"
-msgstr ""
+msgstr "Код"
 
 #. module: lettermgmt
 #: sql_constraint:letter.folder:0 sql_constraint:letter.type:0
 msgid "Code must be unique !"
-msgstr ""
+msgstr "Код должен быть уникальным!"
 
 #. module: lettermgmt
 #: field:letter.reassignment,comment:0
 msgid "Comment"
-msgstr ""
+msgstr "Комментарий"
 
 #. module: lettermgmt
 #: help:letter.reassignment,comment:0
 msgid "Comment for user explaining forward."
-msgstr ""
+msgstr "Комментарий для пользователя, пояснения к пересылке."
 
 #. module: lettermgmt
 #: model:ir.ui.menu,name:lettermgmt.letter_log_config_menu
 msgid "Configuration"
-msgstr ""
+msgstr "Настройки"
 
 #. module: lettermgmt
 #: field:letter.category,create_uid:0 field:letter.channel,create_uid:0
@@ -159,21 +192,16 @@ msgid "Created on"
 msgstr "Создан"
 
 #. module: lettermgmt
-#: help:res.letter,message_last_post:0
-msgid "Date of the last message posted on the record."
-msgstr ""
-
-#. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view field:res.letter,note:0
 msgid "Delivery Notes"
-msgstr ""
+msgstr "Примечания"
 
 #. module: lettermgmt
 #: field:letter.category,display_name:0 field:letter.channel,display_name:0
 #: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
 #: field:letter.type,display_name:0 field:res.letter,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Отображаемое имя"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
@@ -183,22 +211,22 @@ msgstr "Черновик"
 #. module: lettermgmt
 #: field:res.letter,expeditor_ref:0
 msgid "Expeditor Reference"
-msgstr ""
+msgstr "Ссылка для экспедитора"
 
 #. module: lettermgmt
 #: field:res.letter,folder_id:0
 msgid "Folder"
-msgstr ""
+msgstr "Папка"
 
 #. module: lettermgmt
 #: help:res.letter,folder_id:0
 msgid "Folder which contains letter."
-msgstr ""
+msgstr "Папка корреспонденции"
 
 #. module: lettermgmt
 #: field:res.letter,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Читают"
 
 #. module: lettermgmt
 #: help:res.letter,message_summary:0
@@ -206,6 +234,8 @@ msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
 msgstr ""
+"Содержит сводку по чату (количество сообщений, ...). Эта сводка в "
+"формате html для возможности показа в представлении канбан."
 
 #. module: lettermgmt
 #: field:letter.category,id:0 field:letter.channel,id:0
@@ -217,38 +247,38 @@ msgstr "ID"
 #. module: lettermgmt
 #: selection:res.letter,move:0
 msgid "IN"
-msgstr ""
+msgstr "Входящее"
 
 #. module: lettermgmt
 #: help:res.letter,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "Если отмеченная корреспонденция требует вашего внимания."
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_res_letter_in_tree_view
 #: model:ir.ui.menu,name:lettermgmt.res_letter_in_menu
 msgid "Inbound Letters"
-msgstr ""
+msgstr "Входящая корреспонденция"
 
 #. module: lettermgmt
 #: help:res.letter,move:0
 msgid "Incoming or Outgoing Letter."
-msgstr ""
+msgstr "Входящая или Исходящая корреспонденция"
 
 #. module: lettermgmt
 #: help:res.letter,note:0
 msgid "Indications for the delivery officer."
-msgstr ""
+msgstr "Отметки для почтальона"
 
 #. module: lettermgmt
 #: field:res.letter,message_is_follower:0
 msgid "Is a Follower"
-msgstr ""
+msgstr "Читает"
 
 #. module: lettermgmt
 #: field:res.letter,message_last_post:0
 msgid "Last Message Date"
-msgstr ""
+msgstr "Дата последнего сообщения"
 
 #. module: lettermgmt
 #: field:letter.category,__last_update:0 field:letter.channel,__last_update:0
@@ -256,7 +286,7 @@ msgstr ""
 #: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
 #: field:res.letter,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Дата последнего изменения"
 
 #. module: lettermgmt
 #: field:letter.category,write_uid:0 field:letter.channel,write_uid:0
@@ -276,7 +306,7 @@ msgstr "Последний раз обновлено"
 #: field:letter.reassignment,letter_id:0
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Letter"
-msgstr ""
+msgstr "Корреспонденция"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_letter_category_tree_view
@@ -285,7 +315,7 @@ msgstr ""
 #: view:letter.category:lettermgmt.letter_category_form_view
 #: view:letter.category:lettermgmt.letter_category_tree_view
 msgid "Letter Category"
-msgstr ""
+msgstr "Категория Корреспонденции"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_letter_channel_tree_view
@@ -293,41 +323,41 @@ msgstr ""
 #: view:letter.channel:lettermgmt.letter_channel_form_view
 #: view:letter.channel:lettermgmt.letter_channel_tree_view
 msgid "Letter Channel"
-msgstr ""
+msgstr "Способ доставки корреспонденции"
 
 #. module: lettermgmt
 #: field:res.letter,date:0
 msgid "Letter Date"
-msgstr ""
+msgstr "Дата документа"
 
 #. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_letter_folder
 #: view:letter.folder:lettermgmt.letter_folder_form_view
 #: view:letter.folder:lettermgmt.letter_folder_tree_view
 msgid "Letter Folder"
-msgstr ""
+msgstr "Папка корреспонденции"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_letter_folder_tree_view
 #: model:ir.ui.menu,name:lettermgmt.letter_folder_menu
 msgid "Letter Folders"
-msgstr ""
+msgstr "Папки корреспонденции"
 
 #. module: lettermgmt
 #: field:res.letter,child_line:0
 msgid "Letter Lines"
-msgstr ""
+msgstr "Связанная корреспонденция"
 
 #. module: lettermgmt
 #: model:ir.module.category,name:lettermgmt.module_category
 #: model:ir.ui.menu,name:lettermgmt.letter_log_menu
 msgid "Letter Management"
-msgstr ""
+msgstr "Корреспонденция"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_letter_reassignment_tree_view
 msgid "Letter Reassignment"
-msgstr ""
+msgstr "Резолюции"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_letter_type_tree_view
@@ -336,12 +366,12 @@ msgstr ""
 #: view:letter.type:lettermgmt.letter_type_form_view
 #: view:letter.type:lettermgmt.letter_type_tree_view
 msgid "Letter Type"
-msgstr ""
+msgstr "Тип корреспонденции"
 
 #. module: lettermgmt
 #: help:letter.reassignment,letter_id:0
 msgid "Letter in question."
-msgstr ""
+msgstr "Корреспонденция под вопростом"
 
 #. module: lettermgmt
 #: model:ir.ui.menu,name:lettermgmt.res_letter_menu
@@ -349,47 +379,62 @@ msgstr ""
 #: view:res.letter:lettermgmt.res_letter_calendar_view
 #: view:res.letter:lettermgmt.res_letter_tree_view
 msgid "Letters"
-msgstr ""
+msgstr "Корреспонденция"
 
 #. module: lettermgmt
 #: help:letter.folder,letter_ids:0
 msgid "Letters contained in this folder."
-msgstr ""
+msgstr "Корреспонденция содержащаяся в этой папке."
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_filter
 msgid "Letters that haven't arrived to its destination yet."
-msgstr ""
+msgstr "Корреспонденция, которая еще не доставлена."
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Letters that were sent to its destination."
+msgstr "Корреспонденция, отправленная получателю."
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Letters that arrived to its destination."
+msgstr "Корреспонденция, доставлена получателю."
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Letters that were canceled."
+msgstr "Отмененная корреспонденция."
 
 #. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_res_letter
 msgid "Log of Letter Movements"
-msgstr ""
+msgstr "История изменений корреспонденции"
 
 #. module: lettermgmt
 #: model:res.groups,comment:lettermgmt.group_letter_thread
 msgid "Members of this group can set letters' parent and/or childs."
-msgstr ""
+msgstr "Члены этой группы могут управлять связыванием писем."
 
 #. module: lettermgmt
 #: model:res.groups,comment:lettermgmt.group_letter_reasignment
 msgid "Members of this group can view and edit Letter Reasignments."
-msgstr ""
+msgstr "Члены этой группы могут управлять резолюциями."
 
 #. module: lettermgmt
 #: field:res.letter,message_ids:0
 msgid "Messages"
-msgstr ""
+msgstr "Сообщения"
 
 #. module: lettermgmt
 #: help:res.letter,message_ids:0
 msgid "Messages and communication history"
-msgstr ""
+msgstr "Сообщения и история переписки"
 
 #. module: lettermgmt
 #: field:res.letter,move:0
 msgid "Move"
-msgstr ""
+msgstr "Перемещение"
 
 #. module: lettermgmt
 #: field:letter.category,name:0 field:letter.channel,name:0
@@ -401,254 +446,304 @@ msgstr "Название"
 #. module: lettermgmt
 #: field:res.letter,number:0
 msgid "Number"
-msgstr ""
+msgstr "Регистрационный номер"
 
 #. module: lettermgmt
 #: selection:res.letter,move:0
 msgid "OUT"
-msgstr ""
+msgstr "Исходящее"
 
 #. module: lettermgmt
 #: field:res.letter,orig_ref:0
 msgid "Original Reference"
-msgstr ""
+msgstr "Оригинальный номер"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_res_letter_out_tree_view
 #: model:ir.ui.menu,name:lettermgmt.res_letter_out_menu
 msgid "Outbound Letters"
-msgstr ""
+msgstr "Исходящая корреспонденция"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Outbound Source"
-msgstr ""
+msgstr "Способ отправки"
 
 #. module: lettermgmt
 #: field:res.letter,parent_id:0
 msgid "Parent"
-msgstr ""
+msgstr "Связанная корреспонденция"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
-msgid "Parent..."
+msgid "Связанная корреспонденция..."
 msgstr ""
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_filter
 msgid "Pending"
-msgstr ""
+msgstr "В ожидании"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Sent"
+msgstr "Отправлено"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Received"
+msgstr "Получено"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Canceled"
+msgstr "Отменено"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "State"
+msgstr "Состояние"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Recipient"
+msgstr "Получатель"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Sender"
+msgstr "Отправитель"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Channel"
+msgstr "Способ отправки"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Folder"
+msgstr "Папка"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Type"
+msgstr "Тип"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Parent"
+msgstr "Связанная корреспонденция"
 
 #. module: lettermgmt
 #: view:letter.reassignment:lettermgmt.letter_reassignment_form_view
 #: view:letter.reassignment:lettermgmt.letter_reassignment_tree_view
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Reassignment"
-msgstr ""
+msgstr "Резолюции"
 
 #. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_letter_reassignment
 msgid "Reassignment line"
-msgstr ""
+msgstr "Резолюция"
 
 #. module: lettermgmt
 #: field:res.letter,reassignment_ids:0
 msgid "Reassignment lines"
-msgstr ""
+msgstr "Резолюции"
 
 #. module: lettermgmt
 #: help:res.letter,reassignment_ids:0
 msgid "Reassignment users and comments"
-msgstr ""
+msgstr "Пользователь и комментрии к резолюции"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 #: selection:res.letter,state:0
 msgid "Received"
-msgstr ""
+msgstr "Получено"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Received But Returned"
-msgstr ""
+msgstr "Получено Возврат"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 #: selection:res.letter,state:0
 msgid "Received Damage"
-msgstr ""
+msgstr "Получено Повреждено"
 
 #. module: lettermgmt
 #: field:res.letter,rec_date:0
 msgid "Received Date"
-msgstr ""
+msgstr "Дата Получения"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Received but Returned"
-msgstr ""
+msgstr "Получено Возврат"
 
 #. module: lettermgmt
 #: field:res.letter,recipient_partner_id:0
 msgid "Recipient"
-msgstr ""
+msgstr "Получатель"
 
 #. module: lettermgmt
 #: field:res.letter,extern_partner_ids:0
 msgid "Recipients"
-msgstr ""
+msgstr "Получатели"
 
 #. module: lettermgmt
 #: help:res.letter,orig_ref:0
 msgid "Reference Number at Origin."
-msgstr ""
+msgstr "На номер (оригинал)"
 
 #. module: lettermgmt
 #: help:res.letter,expeditor_ref:0
-msgid "Reference Number used by Expeditor."
+msgid "Номер для экспедитора"
 msgstr ""
 
 #. module: lettermgmt
 #: help:res.letter,track_ref:0
-msgid "Reference Number used for Tracking."
+msgid "Номер для отслеживания."
 msgstr ""
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_filter
 msgid "Search Letters"
-msgstr ""
+msgstr "Искать корреспонденцию"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Send"
-msgstr ""
+msgstr "Отправить"
 
 #. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_letter_channel
 msgid "Send/Receive channel"
-msgstr ""
+msgstr "Способ доставки"
 
 #. module: lettermgmt
 #: field:res.letter,sender_partner_id:0
 msgid "Sender"
-msgstr ""
+msgstr "Отправитель"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Sent"
-msgstr ""
+msgstr "Отправлено"
 
 #. module: lettermgmt
 #: help:res.letter,channel_id:0
 msgid "Sent / Receive Source"
-msgstr ""
+msgstr "Способ доставки"
 
 #. module: lettermgmt
 #: field:res.letter,snd_date:0
 msgid "Sent Date"
-msgstr ""
+msgstr "Дата отправки"
 
 #. module: lettermgmt
 #: field:res.letter,size:0
 msgid "Size"
-msgstr ""
+msgstr "Размер"
 
 #. module: lettermgmt
 #: help:res.letter,size:0
 msgid "Size of the package."
-msgstr ""
+msgstr "Размер пакета"
 
 #. module: lettermgmt
 #: field:res.letter,state:0
 msgid "State"
-msgstr ""
+msgstr "Состояние"
 
 #. module: lettermgmt
 #: field:res.letter,name:0
 msgid "Subject"
-msgstr ""
+msgstr "Тема"
 
 #. module: lettermgmt
 #: help:res.letter,name:0
 msgid "Subject of letter."
-msgstr ""
+msgstr "Тема корреспонденции"
 
 #. module: lettermgmt
 #: field:res.letter,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "Резюме"
 
 #. module: lettermgmt
 #: field:res.letter,category_ids:0
 msgid "Tags"
-msgstr ""
+msgstr "Отметки"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Tags... (eg: Classified)"
-msgstr ""
+msgstr "Отметки..."
 
 #. module: lettermgmt
 #: help:res.letter,rec_date:0
 msgid "The date the letter was received."
-msgstr ""
+msgstr "Дата получения корреспонденции"
 
 #. module: lettermgmt
 #: help:res.letter,snd_date:0
 msgid "The date the letter was sent."
-msgstr ""
+msgstr "Дата отправки корреспонденции"
 
 #. module: lettermgmt
 #: help:res.letter,date:0
 msgid "The letter's date."
-msgstr ""
+msgstr "Дата документа"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Thread"
-msgstr ""
+msgstr "Связанная корреспонденция"
 
 #. module: lettermgmt
 #: field:res.letter,track_ref:0
 msgid "Tracking Reference"
-msgstr ""
+msgstr "Номер для отслеживания"
 
 #. module: lettermgmt
 #: field:res.letter,type_id:0
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #. module: lettermgmt
 #: help:res.letter,type_id:0
 msgid "Type of Letter, Depending upon size."
-msgstr ""
+msgstr "Тип корреспонденции"
 
 #. module: lettermgmt
 #: field:res.letter,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "Не прочитанные сообщения"
 
 #. module: lettermgmt
 #: model:res.groups,name:lettermgmt.group_letter_thread
 msgid "Use Letter Parent and Thread"
-msgstr ""
+msgstr "Используйте связанную корреспонденцию"
 
 #. module: lettermgmt
 #: model:res.groups,name:lettermgmt.group_letter_reasignment
 msgid "Use Letter Reasignments"
-msgstr ""
+msgstr "Используйте резолюции"
 
 #. module: lettermgmt
 #: help:letter.reassignment,name:0
 msgid "User to forward letter to."
-msgstr ""
+msgstr "Используйтя для пересылки корреспонденции"
 
 #. module: lettermgmt
 #: field:res.letter,weight:0
 msgid "Weight"
-msgstr ""
+msgstr "Вес"
 
 #. module: lettermgmt
 #: help:res.letter,weight:0
 msgid "Weight (in KG)"
-msgstr ""
+msgstr "Вес корреспонденции в килограммах"
